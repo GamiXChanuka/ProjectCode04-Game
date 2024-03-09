@@ -1,23 +1,12 @@
 import java.sql.SQLOutput;
 import java.util.Scanner;
 
-public class SelectArmy extends Equipment {
+public class SelectArmy extends Equipment{
     public void newPlayerArcher(){
         Archers archer1=new Archers();
-        System.out.println("\n");
-
-        System.out.println("Name:Shooter\nPrice:80\nAttack:11\nDefence:4\nHealth:6\nSpeed:9\n");
-        System.out.println("Name:Ranger\nPrice:115\nAttack:14\nDefence:5\nHealth:8\nSpeed:10\n");
-        System.out.println("Name:Sunfire\nPrice:160\nAttack:15\nDefence:5\nHealth:7\nSpeed:14\n");
-        System.out.println("Name:Zing\nPrice:200\nAttack:16\nDefence:9\nHealth:11\nSpeed:14\n");
-        System.out.println("Name:Saggitarius\nPrice:230\nAttack:18\nDefence:7\nHealth:12\nSpeed:17\n");
-
-        System.out.println("Choose Archer : ");
-        Scanner getArcher=new Scanner(System.in);
-        String archerName=getArcher.nextLine();
-        archer1.setArcher(archerName);
-        System.out.println();
-        System.out.println(archer1.price);
+        System.out.println("New Player Archer:\n");
+        System.out.println("Archer1:\nName:Shooter\nPrice:80\nAttack:11\nDefence:4\nHealth:6\nSpeed:9\n");
+        archer1.setArcher("shooter");
     }
     public void newPlayerKnight(){
         Knights knight1=new Knights();
@@ -30,7 +19,7 @@ public class SelectArmy extends Equipment {
         System.out.println("New Player Mage(choose):\n");
         System.out.println("Mage1:\nName:Warlock\nPrice:100\nAttack:12\nDefence:7\nHealth:10\nSpeed:12\n");
         System.out.println("Mage2:\nName:Illusionist\nPrice:120\nAttack:13\nDefence:8\nHealth:12\nSpeed:14\n");
-        System.out.print("Select your mage Number:");
+        System.out.print("Select your mage Number: 1 or 2 \n");
         Scanner input=new Scanner(System.in);
         int newPlayerMageNumber=input.nextInt();
         switch(newPlayerMageNumber){
@@ -57,7 +46,7 @@ public class SelectArmy extends Equipment {
     }
     public void defaultArcher(String archer,String armour,String artefact){
         Archers archer2=new Archers();
-        //archer2.setArcher(archer);
+        archer2.setArcher(archer);
     }
     public void defaultKnight(String knight,String armour,String artefact){
         Knights knight2=new Knights();

@@ -1,9 +1,6 @@
 
 import java.util.*;
-
-
-
-class MysticMayhem {
+class Main {
     private static List<UserProfile> userProfiles = new ArrayList<>();
 
     // Method to create a new user profile
